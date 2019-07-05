@@ -70,7 +70,7 @@ De repository van de meesterproef vind u door op de volgende link te klikken: ht
 
 ## Inhoudsopgave
 
-#### 1. Leerdoelen
+#### 1. Leerdoelen + Reflectie
 #### 2. Logboek
 #### 3. Design Rationale
 #### 4. Over mij
@@ -78,7 +78,7 @@ De repository van de meesterproef vind u door op de volgende link te klikken: ht
 ------
 
 
-## 1. Leerdoelen
+## 1. Leerdoelen + Reflectie
 
 ✅  <strong>Behaald</strong>
 
@@ -94,7 +94,14 @@ Routing & States | Routing en States kunnen al dan niet met een micro library wo
 | *Web App From Scratch* | User needs begrijpen en gebruiken in je ontwerp | Er is een user scenario geschreven dat aansluit bij de identiteit van jouw mens | ✅ <details>Ik heb een user scenario beschreven in het design rationale in de readme van de repository van het eindproduct. (https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master/README.md) Hierin heb ik een voorbeeldgebruiker gepresenteerd die tegen een probleem op stuit, waar deze applicatie voor ontwikkeld is. Ik vertel hierin hoe de applicatie aan zijn specifieke behoefte kan voldoen. En waarom de gebruiker in het beste geval meteen deze applicatie kan zou moeten raadplegen. </details>| 
 *Real-Time Web* | Client-server interacties | De student kan door interactie het datamodel van de server in real-time beïnvloeden door direct data aan te passen. De student heeft eigenhandig data manipulaties opgezet. | ✅ <details>Ik heb de real-time interacties van client en server opgezet. Dit houd in dat de client berichten en reacties kan plaatsen op het dashboard van de applicatie en deze worden real-time geüpdate bij andere clients.  Dit gebeurt doordat de data gebroadcast wordt van de server naar andere clients als in client -->server-->alle andere clients. Voor code zie ook: https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master/public/javascript/reactions.js </details>|
 *Real-Time-Web* | Data management | Het datamodel is op een slimme manier opgezet die van dieper inzicht getuigd. Je hebt een datamodel gecreeërd dat nauw aansluit op jouw app en data. | ✅<details>Wanneer er een post of reactie geplaatst wordt en er een real-time bericht van de client naar de server gestuurd wordt zal de server dit bericht verder verwerken. Zij zal voor verschillende CRUD (zonder D) operaties de benodigde functies activeren. Zo wordt de data van elk bericht opgeslagen middels mongoDB en mongoose op www.mlab.com Hiervoor is een model gemaakt in data/models/post.js: https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master/data/models/post.js .  ![Object in Database](./dbObject.jpg "Afbeelding laat zien hoe het object in de database uiteindelijk is opgebouwd") Hier wordt vervolgens via promises invulling aan gegeven wanneer er een bericht opgeslagen dient te worden: https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master/source/savePost.js . Wanneer er een reactie geplaatst wordt, dient het bericht in de database geüpdate te worden en wordt de "reactions" property aangevult met de nieuwe reactie. Zie hiervoor ook: https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/1ef8105bd59f42011d214346c0429fe683605055/source/socketServer.js#L55 . ![Object in database met reactie](./dbObjectReaction.jpg "Afbeelding laat zien hoe het object in de database uiteindelijk is opgebouwd met reactie") Tijdens deze stap ondervond ik veel problemen met het correct opmaken van de model. MongoDB zal namelijk niet correct het bericht in de database updaten wanneer de gegeven data niet 100% in lijn ligt met de beschreven "type" in de database. Wat ik hierbij heb geleerd is dat als uitgangspunt het beste data zo gemanipuleerd diend te worden dat matched schema, ipv een schema manipuleren zodat het matched met de data. Dit geeft meer grip op errors doordat er specifiekere error-handling kan worden toegepast en dit heb ik dan ook gedaan middels kleurgecodeerde console.logs. Als laatste gebruikt de applicatie find methods (de R van CRUD) om bij een nieuwe reactie het correcte bericht te vinden door gebruik te maken van het specifieke ID van dat bericht wat in een verborgen element van de html zit. Ook heb ik geleerd hoe ik "relaties" op een logische manier kan "nesten" in een niet-relationele database. Dit werkt voor mij op dit moment goed maar in de nabije toekomst wil ik mij ook gaan verdiepen in SQL databases. </details> |
-*Samenwerken* | Ik wil mijn documentatie onderhouden middels Github Projects | Ik wil efficient gebruik maken van de UI die Github Projects biedt. Daarmee doel ik op het labelen van zowel issues als pull requests, het maken en mergen van branches en het verdelen van taken onder ontwikkelaars. | ✅ Ik heb dit leerdoel behaald. Ik heb zelf extra labels aangemaakt om niet gedekte eigenschappen te benadrukken binnen het project. ![Labelling](./projectlabelling.jpg "Afbeelding laat zien dat ik labelling heb toegepast")
+*Samenwerken* (Behoort niet tot een minor vak)| Ik wil mijn documentatie onderhouden middels Github Projects | Ik wil efficient gebruik maken van de UI die Github Projects biedt. Daarmee doel ik op het labelen van zowel issues als pull requests, het maken en mergen van branches en het verdelen van taken onder ontwikkelaars. | ✅ <details>Ik heb dit leerdoel behaald. Ik heb zelf extra labels aangemaakt om niet gedekte eigenschappen te benadrukken binnen het project. ![Labelling](./projectlabelling.jpg "Afbeelding laat zien dat ik labelling heb toegepast") </details>
+
+### Reflectie op het proces:
+Tijdens deze meesterproef heb ik mijzelf veel nieuwe kennis eigen kunnen maken. Een voorbeeld hiervan is het dieper nesten van objecten in mongoDB d.m.v. mongoose, terwijl ik in eerste instantie door veel errors en bugs de handdoek in de ring had gegooit. 
+
+Ook heb ik mijn technische kennis naar een hoger niveau kunnen tillen. Dit komt doordat ik nu weet hoe ik een vloeiende combinatie kan maken met post-requests, express.js, ejs en socket.io . Waarmee ik "onload" data af kan geven aan de server en meegeven naar andere webpagina's en tegelijkertijd real-time interacties kan bedienen zonder dat de gehele pagina diend te worden herladen. Dit is iets wat niet meteen tot mijn inzicht kwam in het proces. pas halverwege het proces (zie logboek) kwam ik tot de ontdekking dat dit een veel meer solide aanpak is. 
+
+Hoewel een sterk design ontwikkelen niet 1 van mijn belangrijkste leerdoelen was heb ik mijzelf ook hierin verder ontwikkeld. Met name in het bevorderen van gebruiksvriendelijkheid. Zo heb ik kleurcodering toegepast op de berichten in het dashboard op basis van het soort activiteit waar het over gaat.  Doordat dit in de gehele webapplicatie terugkomt is de gebruiker met niet tekstuele informatie altijd op de hoogte wat voor bericht hij/zij maakt en/of leest. Ook heb ik user-feedback toegepast wanneer men iets opgeeft wat niet gebruikt kan worden. Speciale tekens zijn bijvoorbeeld niet toegestaan in de titel van een bericht. De gerbuiker zal daarom ook nu een melding zien die dit aangeeft.
 
 
 ## 2. Logboek
@@ -157,6 +164,8 @@ De volgende data zal worden opgeslagen in een database:
 - Tijdens het tweede gesprek om 14:30 vertelde Mark on over de app "koppel". Deze applicatie heeft vergelijkbare features met onze applicatie. Het is echter meer gericht op het ontwikkelen van de basisvaardigheden (bvb NT2). Mark raadde aan om een keer langs te gaan bij de ontwikkelaars hiervan op Amstel.
 - - Joep, Mark en ik hebben nogmaals de applicatie doorgenomen en het design van Joep op Adobe XD
 
+#### 21-06-2019
+Vandaag heb ik mij gebogen over een bug die ervoor zorgde dat de tags niet correct gerendered werden. Hier ben ik de hele dag mee bezig geweest maar uiteindelijk heb ik de oorzaak van het probleem gevonden. Wat bleek is dat tag container niet goed werd aangesproken in handleInput.js. 
 
 
 #### 24-06-2019
@@ -168,14 +177,27 @@ Feedbackgesprek opdrachtgever:
 - image verbinden aa categorieen --> bvb vlaggen, dieren en economie    
 - menu knop in prikbord: animatie toevoegen --> laten faden met kleuren + sticky maken
 
+#### 01-07-2019
+Vandaag heeft Koop aanvullende feedback gegeven op het design en flow van onze applicatie. Hieruit is naar voren gekomen dat een aantal dingen niet logisch zijn ingedeeld. Doordat deze feedback vooral design gerelateerd was heb ik er veel van geleerd, ik ben namelijk nog steeds van mening dat dit niet 1 van mijn sterkere punten is. Hij gaf aan dat met name de layout van een bericht logisch dient te zijn. Verschillende elementen waren hierin niet goed vormgegeven en soms ook op een onlogische plek geplaatst. Joep heeft zich hierover gebogen en het aangepast. 
+
+
+#### 02-07-2019
+Doordat de reacties niet correct werden geupdate in de database waren wij niet in staat om de timestamps hiervan netjes te renderen. De reden hiervoor was dat de datum bij de reactie werd opgeslagen in dezelfde property. Ik was in de veronderstelling dat mongoDB niet in staat was om zo diep wijzigingen te "nesten". Nadat ik deskresearch heb uitgevoerd ben ik tot de conclusie gekomen dat dit wel mogelijk is. Dit heb ik vervolgens toegepast in het concept en nu werkt het zoals gewenst is.
+
+#### 04-07-2019
+Koop had in zijn feedback op afgelopen maandag (01-07) aangegeven dat hij een knop wilde om reacties te plaatsen i.p.v. dat de reacties al zichbaar zijn zodra je op de pagina komt. Hier is nu een uitklapmenu voor ontwikkeld en ik heb ervoor gezorgd dat deze nu realtime geupdate wordt wanneer men een reactie plaatst. Tevens heb ik als aanvulling op de UI ervoor gezorgd dat de kleurcodering van berichten nu ook bij het maken van een bericht al terugkomt. Zo klikt de gebruiker op een knop en beland vervolgens in een scherm die dezelfde kleur heeft.
+
+
+
+
 
 
 ## 3. Design Rationale
 
-The design rationale has been described in the readme of the following repository:
+Ik heb de Design Rationale geschreven en geplaatst in de volgende repository:
 
 https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master/README.md
-####
+
 
 ## 4. Over mij
 
