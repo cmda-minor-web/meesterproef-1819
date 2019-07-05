@@ -185,6 +185,18 @@ Feedbackgesprek opdrachtgever:
 - image verbinden aa categorieen --> bvb vlaggen, dieren en economie    
 - menu knop in prikbord: animatie toevoegen --> laten faden met kleuren + sticky maken
 
+#### 25-06-2019
+Vandaag hebben Joep en ik de gehele werkdag van 10:00 tot 21:00 in de oba gewerkt aan het project. Verschillende bugs zijn opgelost en gedocumenteerd in github projects. Ook heeft een collega van de opdrachtgever onze applicatie getest en zij was hier zeer over te spreken!
+
+![Test gebruiker. Werknemeemster van de oba en collega vand e opdrachtgever](testUser.jpg "Test gebruiker in de oba")
+
+#### 27-06-2019 
+
+Vandaag was de markt
+Joep en ik hebben enorm goede feedback ontvangen van zowel de docenten, coach als de opdrachtgever en verschillende personen die ons product kwamen testen. Het grootste aandachtspunt volgens de docenten en coach was de flow en design van de applicatie. Zij zouden graag nog willen zien dat alles correct is uitgelijnt en kleuren overeen komen.
+
+![Gebruiker. Dit was een bekende van de opdrachtgever](testGebruikerMarkt.jpg "Gebruiker op de markt")
+
 #### 01-07-2019
 Vandaag heeft Koop aanvullende feedback gegeven op het design en flow van onze applicatie. Hieruit is naar voren gekomen dat een aantal dingen niet logisch zijn ingedeeld. Doordat deze feedback vooral design gerelateerd was heb ik er veel van geleerd, ik ben namelijk nog steeds van mening dat dit niet 1 van mijn sterkere punten is. Hij gaf aan dat met name de layout van een bericht logisch dient te zijn. Verschillende elementen waren hierin niet goed vormgegeven en soms ook op een onlogische plek geplaatst. Joep heeft zich hierover gebogen en het aangepast. 
 
