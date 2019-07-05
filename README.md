@@ -1,6 +1,4 @@
-# OBA - Dating 
-
-Feedbackgesprek: 
+<!-- Feedbackgesprek: 
 Intro
 - zelf
 - minor
@@ -53,16 +51,15 @@ CSS to the rescue
 hoe te deployen --
 
 readme: reflecteren op leedoelen 
-
-nieuwe dssign rationale schrijven --> met name features updaten
-///////////
-
+-->
 
 ![logo](./public/images/logo.svg "Logo van de applicatie, design door Joep Gravemaker")
 
 ## Inleiding
 
 Deze readme betreft mijn individuele documentatie over de meesterproef van de minor web development van de HBO-opleiding CMD jaargang 2018/2019. Hierin beschrijf ik onder andere mijn persoonlijke leerdoelen en de reflectie hierop na afloop van het proces en het logboek. Tijdens dit proces heb ik samengewerkt met Joep Gravemaker, Joep is student aan dezelfde minor. 
+
+![screenshot](./screenshot2.jpg "screenshot van de indexpagina van de applicatie, zonder scroll") ![screenshot](./screenshot1.jpg "screenshot van de indexpagina van de applicatie met scroll") 
 
 De repository van de meesterproef vind u door op de volgende link te klikken: https://github.com/japgroevemaker/Meesterproef-OBA-date/blob/master
 
@@ -103,9 +100,14 @@ Ook heb ik mijn technische kennis naar een hoger niveau kunnen tillen. Dit komt 
 
 Hoewel een sterk design ontwikkelen niet 1 van mijn belangrijkste leerdoelen was heb ik mijzelf ook hierin verder ontwikkeld. Met name in het bevorderen van gebruiksvriendelijkheid. Zo heb ik kleurcodering toegepast op de berichten in het dashboard op basis van het soort activiteit waar het over gaat.  Doordat dit in de gehele webapplicatie terugkomt is de gebruiker met niet tekstuele informatie altijd op de hoogte wat voor bericht hij/zij maakt en/of leest. Ook heb ik user-feedback toegepast wanneer men iets opgeeft wat niet gebruikt kan worden. Speciale tekens zijn bijvoorbeeld niet toegestaan in de titel van een bericht. De gerbuiker zal daarom ook nu een melding zien die dit aangeeft.
 
+Betreft Samenwerking:
+
+Ik vond het een erg leerzame en prettige ervaring om voor een project van deze omvang samen te werken met Joep. Ik heb het ervaren als een periode van hard werken en veel verdienen. Wij hebben ons gezamelijk hard gemaakt voor de wens van de opdrachtgever en het resultaat mag er zijn. Zowel onze opdrachtgever, coaches en andere docenten zijn zeer te spreken over onze samenwerking en daardoor geloof ik dat er wel een kern van waarheid in moet zitten. Wij hebben gedurende het gehele project goede afspraken gemaakt maar wisten zelfs buiten die afspraken om al wat we van elkaar konden verwachten. Het leek bijna alsof we al veel langer samen werkten.
 
 ## 2. Logboek
+
 ---
+
 #### 29-05-2019
 
 Vandaag was de Kickoff van de meesterproef. 
@@ -186,10 +188,6 @@ Doordat de reacties niet correct werden geupdate in de database waren wij niet i
 
 #### 04-07-2019
 Koop had in zijn feedback op afgelopen maandag (01-07) aangegeven dat hij een knop wilde om reacties te plaatsen i.p.v. dat de reacties al zichbaar zijn zodra je op de pagina komt. Hier is nu een uitklapmenu voor ontwikkeld en ik heb ervoor gezorgd dat deze nu realtime geupdate wordt wanneer men een reactie plaatst. Tevens heb ik als aanvulling op de UI ervoor gezorgd dat de kleurcodering van berichten nu ook bij het maken van een bericht al terugkomt. Zo klikt de gebruiker op een knop en beland vervolgens in een scherm die dezelfde kleur heeft.
-
-
-
-
 
 
 ## 3. Design Rationale
